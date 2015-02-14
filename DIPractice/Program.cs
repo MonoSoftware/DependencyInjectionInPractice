@@ -27,6 +27,7 @@ namespace DIPractice
             IKernel kernel = new StandardKernel();
             kernel.Bind<IWarrior>().To<Samurai>();
             kernel.Bind<IWeapon>().To<Shuriken>();
+            kernel.Bind<IWeapon>().To<Sword>();
 
             var warrior1 = kernel.Get<IWarrior>();
             warrior1.Attack("the evildoers");

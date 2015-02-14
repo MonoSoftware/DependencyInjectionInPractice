@@ -8,6 +8,7 @@
  * */
 
 using System;
+using System.Collections.Generic;
 
 namespace DIPractice.Weapons
 {
@@ -15,7 +16,7 @@ namespace DIPractice.Weapons
     {
         #region Fields
 
-        private readonly IWeapon weapon;
+        private readonly List<IWeapon> weapons;
 
         #endregion Fields
 
@@ -24,10 +25,10 @@ namespace DIPractice.Weapons
         /// <summary>
         /// Initializes a new instance of the <see cref="Samurai" /> class.
         /// </summary>
-        /// <param name="weapon">The weapon.</param>
-        public Samurai(IWeapon weapon)
+        /// <param name="weapons">The weapons.</param>
+        public Samurai(List<IWeapon> weapons)
         {
-            this.weapon = weapon;
+            this.weapons = weapons;
         }
 
         #endregion Constructors
@@ -40,7 +41,7 @@ namespace DIPractice.Weapons
         /// <param name="target">The target.</param>
         public void Attack(string target)
         {
-            this.weapon.Hit(target);
+            this.weapons.ForEach(w => w.Hit(target));
         }
 
         #endregion Methods
