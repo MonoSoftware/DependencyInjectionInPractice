@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * Dependency Injection in Practice
+ * Copyright 2015 Kristijan Horvat
+ *
+ * Examples taken from Ninject  Wiki
+ * https://github.com/ninject/Ninject/wiki/
+ *
+ * */
+
+using System;
 
 namespace DIPractice.Weapons
 {
