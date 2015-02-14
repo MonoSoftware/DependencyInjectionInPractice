@@ -23,9 +23,7 @@ namespace DIPractice
         private static void Main(string[] args)
         {
             var warrior1 = new Samurai(new Shuriken(new PiercedWeaponAction()));
-            var warrior2 = new Samurai(new Sword(new ChoppedWeaponAction()));
             warrior1.Attack("the evildoers");
-            warrior2.Attack("the evildoers");
         }
 
         #endregion Methods

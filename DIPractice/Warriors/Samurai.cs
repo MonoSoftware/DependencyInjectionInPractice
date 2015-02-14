@@ -25,7 +25,7 @@ namespace DIPractice.Weapons
         /// Initializes a new instance of the <see cref="Samurai" /> class.
         /// </summary>
         /// <param name="weapon">The weapon.</param>
-        public Samurai(IWeapon weapon)
+        public Samurai(Shuriken weapon)
         {
             this.weapon = weapon;
         }
