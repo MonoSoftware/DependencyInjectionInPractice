@@ -7,6 +7,7 @@
  *
  * */
 
+using DIPractice.Warriors;
 using DIPractice.Weapons;
 using Ninject;
 using System;
@@ -24,8 +25,10 @@ namespace DIPractice
         private static void Main(string[] args)
         {
             IKernel kernel = new StandardKernel();
+            kernel.Bind<IWarrior>().To<Samurai>();
+            kernel.Bind<IWeapon>().To<Shuriken>();
 
-            var warrior1 = kernel.Get<Samurai>();
+            var warrior1 = kernel.Get<IWarrior>();
             warrior1.Attack("the evildoers");
         }
 

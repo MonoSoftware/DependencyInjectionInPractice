@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Warriors\IWarrior.cs" />
     <Compile Include="Warriors\Samurai.cs" />
     <Compile Include="Weapons\GenericWeaponAction.cs" />
     <Compile Include="Weapons\ChoppedWeaponAction.cs" />

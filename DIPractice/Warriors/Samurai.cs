@@ -11,7 +11,7 @@ using System;
 
 namespace DIPractice.Weapons
 {
-    public class Samurai
+    public class Samurai : DIPractice.Warriors.IWarrior
     {
         #region Fields
 
@@ -25,7 +25,7 @@ namespace DIPractice.Weapons
         /// Initializes a new instance of the <see cref="Samurai" /> class.
         /// </summary>
         /// <param name="weapon">The weapon.</param>
-        public Samurai(Shuriken weapon)
+        public Samurai(IWeapon weapon)
         {
             this.weapon = weapon;
         }
