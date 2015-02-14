@@ -15,7 +15,7 @@ namespace DIPractice.Weapons
     {
         #region Fields
 
-        private readonly Sword sword;
+        private readonly IWeapon weapon;
 
         #endregion Fields
 
@@ -24,9 +24,10 @@ namespace DIPractice.Weapons
         /// <summary>
         /// Initializes a new instance of the <see cref="Samurai" /> class.
         /// </summary>
-        public Samurai()
+        /// <param name="weapon">The weapon.</param>
+        public Samurai(IWeapon weapon)
         {
-            this.sword = new Sword();
+            this.weapon = weapon;
         }
 
         #endregion Constructors
@@ -39,7 +40,7 @@ namespace DIPractice.Weapons
         /// <param name="target">The target.</param>
         public void Attack(string target)
         {
-            this.sword.Hit(target);
+            this.weapon.Hit(target);
         }
 
         #endregion Methods

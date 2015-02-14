@@ -22,8 +22,10 @@ namespace DIPractice
         /// <param name="args">The arguments.</param>
         private static void Main(string[] args)
         {
-            var warrior = new Samurai();
-            warrior.Attack("the evildoers");
+            var warrior1 = new Samurai(new Shuriken());
+            var warrior2 = new Samurai(new Sword());
+            warrior1.Attack("the evildoers");
+            warrior2.Attack("the evildoers");
         }
 
         #endregion Methods

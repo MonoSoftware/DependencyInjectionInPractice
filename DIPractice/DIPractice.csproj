@@ -45,6 +45,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Warriors\Samurai.cs" />
+    <Compile Include="Weapons\IWeapon.cs" />
+    <Compile Include="Weapons\Shuriken.cs" />
     <Compile Include="Weapons\Sword.cs" />
   </ItemGroup>
   <ItemGroup>

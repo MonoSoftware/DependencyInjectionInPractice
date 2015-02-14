@@ -11,7 +11,7 @@ using System;
 
 namespace DIPractice.Weapons
 {
-    public class Sword : IWeapon
+    public interface IWeapon
     {
         #region Methods
 
@@ -19,10 +19,7 @@ namespace DIPractice.Weapons
         /// Hits the specified target.
         /// </summary>
         /// <param name="target">The target.</param>
-        public void Hit(string target)
-        {
-            Console.WriteLine("Chopped {0} clean in half", target);
-        }
+        void Hit(string target);
 
         #endregion Methods
     }
