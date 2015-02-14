@@ -8,6 +8,7 @@
  * */
 
 using DIPractice.Weapons;
+using Ninject;
 using System;
 
 namespace DIPractice
@@ -22,7 +23,9 @@ namespace DIPractice
         /// <param name="args">The arguments.</param>
         private static void Main(string[] args)
         {
-            var warrior1 = new Samurai(new Shuriken(new PiercedWeaponAction()));
+            IKernel kernel = new StandardKernel();
+
+            var warrior1 = kernel.Get<Samurai>();
             warrior1.Attack("the evildoers");
         }
 
