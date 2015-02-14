@@ -11,17 +11,17 @@ using System;
 
 namespace DIPractice.Weapons
 {
-    public class Shuriken : IWeapon
+    public class GenericWeaponAction : IWeaponAction
     {
         #region Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Shuriken" /> class.
+        /// Initializes a new instance of the <see cref="GenericWeaponAction" /> class.
         /// </summary>
-        /// <param name="weaponAction">The weapon action.</param>
-        public Shuriken(IWeaponAction weaponAction)
+        /// <param name="action">The action.</param>
+        public GenericWeaponAction(string action)
         {
-            this.WeaponAction = weaponAction;
+            this.Action = action;
         }
 
         #endregion Constructors
@@ -32,19 +32,19 @@ namespace DIPractice.Weapons
         /// Gets or sets the action.
         /// </summary>
         /// <value>The action.</value>
-        private IWeaponAction WeaponAction { get; set; }
+        public string Action { get; set; }
 
         #endregion Properties
 
         #region Methods
 
         /// <summary>
-        /// Hits the specified target.
+        /// Gets the weapon action.
         /// </summary>
-        /// <param name="target">The target.</param>
-        public void Hit(string target)
+        /// <returns>Action to perform.</returns>
+        public string GetAction()
         {
-            Console.WriteLine("{0} {1}'s armor", WeaponAction.GetAction(), target);
+            return Action;
         }
 
         #endregion Methods
