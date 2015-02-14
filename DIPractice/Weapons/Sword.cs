@@ -19,7 +19,7 @@ namespace DIPractice.Weapons
         /// Initializes a new instance of the <see cref="Sword" /> class.
         /// </summary>
         /// <param name="weaponAction">The weapon action.</param>
-        public Sword(IWeaponAction weaponAction)
+        public Sword(ChoppedWeaponAction weaponAction)
         {
             this.WeaponAction = weaponAction;
         }

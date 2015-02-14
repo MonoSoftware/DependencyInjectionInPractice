@@ -24,10 +24,8 @@ namespace DIPractice
         {
             var warrior1 = new Samurai(new Shuriken(new PiercedWeaponAction()));
             var warrior2 = new Samurai(new Sword(new ChoppedWeaponAction()));
-            var warrior3 = new Samurai(new Sword(new GenericWeaponAction("Slice")));
             warrior1.Attack("the evildoers");
             warrior2.Attack("the evildoers");
-            warrior3.Attack("the evildoers");
         }
 
         #endregion Methods
