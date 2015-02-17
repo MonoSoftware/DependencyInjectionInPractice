@@ -49,12 +49,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Warriors\IWarrior.cs" />
     <Compile Include="Warriors\Samurai.cs" />
+    <Compile Include="Weapons\IDaggerFactory.cs" />
+    <Compile Include="Weapons\IDagger.cs" />
     <Compile Include="Weapons\GenericWeaponAction.cs" />
     <Compile Include="Weapons\ChoppedWeaponAction.cs" />
     <Compile Include="Weapons\PiercedWeaponAction.cs" />
     <Compile Include="Weapons\IAction.cs" />
     <Compile Include="Weapons\IWeapon.cs" />
     <Compile Include="Weapons\Shuriken.cs" />
+    <Compile Include="Weapons\Dagger.cs" />
     <Compile Include="Weapons\Sword.cs" />
   </ItemGroup>
   <ItemGroup>

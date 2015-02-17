@@ -1,13 +1,4 @@
-﻿/*
- * Dependency Injection in Practice
- * Copyright 2015 Kristijan Horvat
- *
- * Examples taken from Ninject  Wiki
- * https://github.com/ninject/Ninject/wiki/
- *
- * */
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace DIPractice.Weapons
@@ -16,6 +7,7 @@ namespace DIPractice.Weapons
     {
         #region Fields
 
+        private readonly IDaggerFactory daggerFactory;
         private readonly List<IWeapon> weapons;
 
         #endregion Fields
@@ -26,9 +18,11 @@ namespace DIPractice.Weapons
         /// Initializes a new instance of the <see cref="Samurai" /> class.
         /// </summary>
         /// <param name="weapons">The weapons.</param>
-        public Samurai(List<IWeapon> weapons)
+        /// <param name="daggerFactory">The dagger factory.</param>
+        public Samurai(List<IWeapon> weapons, IDaggerFactory daggerFactory)
         {
             this.weapons = weapons;
+            this.daggerFactory = daggerFactory;
         }
 
         #endregion Constructors
@@ -41,6 +35,10 @@ namespace DIPractice.Weapons
         /// <param name="target">The target.</param>
         public void Attack(string target)
         {
+            if (target.Contains("enemy"))
+            {
+                daggerFactory.Create().Hit(target);
+            }
             this.weapons.ForEach(w => w.Hit(target));
         }
 
