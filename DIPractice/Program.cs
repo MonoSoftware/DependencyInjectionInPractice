@@ -29,7 +29,13 @@ namespace DIPractice
 
             var warrior1 = kernel.Get<IWarrior>();
             warrior1.Attack("the evildoers");
-            warrior1.Attack("the enemy");
+
+            Console.WriteLine("Who do you want to kill today?");
+            Console.Out.Flush();
+            var name = Console.ReadLine();
+
+            var warrior2 = kernel.Get<IWarrior>();
+            warrior2.Attack(name);
         }
 
         #endregion Methods
