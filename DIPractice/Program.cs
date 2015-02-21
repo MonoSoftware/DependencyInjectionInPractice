@@ -15,6 +15,7 @@ namespace DIPractice
         /// <param name="args">The arguments.</param>
         private static void Main(string[] args)
         {
+            //NOTE: Composition Root
             IKernel kernel = new StandardKernel();
             kernel.Bind<IDagger>().To<Dagger>();
             kernel.Bind<IDaggerFactory>().To<DaggerFactory>();
