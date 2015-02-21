@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace DIPractice.Weapons
 {
@@ -7,8 +6,7 @@ namespace DIPractice.Weapons
     {
         #region Fields
 
-        private readonly IDaggerFactory daggerFactory;
-        private readonly List<IWeapon> weapons;
+        private readonly IWeaponFactory weaponFactory;
 
         #endregion Fields
 
@@ -17,12 +15,10 @@ namespace DIPractice.Weapons
         /// <summary>
         /// Initializes a new instance of the <see cref="Samurai" /> class.
         /// </summary>
-        /// <param name="weapons">The weapons.</param>
-        /// <param name="daggerFactory">The dagger factory.</param>
-        public Samurai(List<IWeapon> weapons, IDaggerFactory daggerFactory)
+        /// <param name="weaponFactory">The weapon factory.</param>
+        public Samurai(IWeaponFactory weaponFactory)
         {
-            this.weapons = weapons;
-            this.daggerFactory = daggerFactory;
+            this.weaponFactory = weaponFactory;
         }
 
         #endregion Constructors
@@ -37,9 +33,13 @@ namespace DIPractice.Weapons
         {
             if (target.Contains("enemy"))
             {
-                daggerFactory.Create().Hit(target);
+                weaponFactory.CreateDagger().Hit(target);
             }
-            this.weapons.ForEach(w => w.Hit(target));
+            else
+            {
+                weaponFactory.CreateSword().Hit(target);
+                weaponFactory.CreateShuriken().Hit(target);
+            }
         }
 
         #endregion Methods

@@ -2,7 +2,7 @@
 
 namespace DIPractice.Weapons
 {
-    public class Sword : IWeapon
+    public class Sword : ISword
     {
         #region Constructors
 

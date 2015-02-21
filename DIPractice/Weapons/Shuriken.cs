@@ -2,7 +2,7 @@
 
 namespace DIPractice.Weapons
 {
-    public class Shuriken : IWeapon
+    public class Shuriken : IShuriken
     {
         #region Constructors
 

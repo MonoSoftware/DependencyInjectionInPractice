@@ -21,6 +21,9 @@ namespace DIPractice
 
             kernel.Bind<IWeapon>().To<Shuriken>();
             kernel.Bind<IWeapon>().To<Sword>();
+
+            kernel.Bind<IWeaponFactory>().To<WeaponFactory>();
+
             kernel.Bind<IWarrior>().To<Samurai>();
 
             var warrior1 = kernel.Get<IWarrior>();

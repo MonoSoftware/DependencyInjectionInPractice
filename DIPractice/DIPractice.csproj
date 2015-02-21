@@ -49,6 +49,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Warriors\IWarrior.cs" />
     <Compile Include="Warriors\Samurai.cs" />
+    <Compile Include="Weapons\IShuriken.cs" />
+    <Compile Include="Weapons\ISword.cs" />
+    <Compile Include="Weapons\IWeaponFactory.cs" />
     <Compile Include="Weapons\IDaggerFactory.cs" />
     <Compile Include="Weapons\IDagger.cs" />
     <Compile Include="Weapons\GenericWeaponAction.cs" />
