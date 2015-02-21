@@ -42,19 +42,13 @@ namespace DIPractice
 
             kernel.Bind<IWarrior>().To<Samurai>().InThreadScope();
 
-            StartNewThread(() =>
-                {
-                    Attack(kernel);
-                }).Join();
+            StartNewThread(() => Attack(kernel)).Join();
 
             Console.WriteLine();
             Console.WriteLine("We are bloodthirsty today ...");
             Console.WriteLine();
 
-            StartNewThread(() =>
-            {
-                Attack(kernel);
-            });
+            StartNewThread(() => Attack(kernel));
         }
 
         private static Thread StartNewThread(Action a)
