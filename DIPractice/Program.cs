@@ -25,7 +25,7 @@ namespace DIPractice
 
             kernel.Bind<IWeaponFactory>().To<WeaponFactory>();
 
-            kernel.Bind<IWarrior>().To<Samurai>();
+            kernel.Bind<IWarrior>().To<Samurai>().InSingletonScope();
 
             var warrior1 = kernel.Get<IWarrior>();
             warrior1.Attack("the evildoers");
