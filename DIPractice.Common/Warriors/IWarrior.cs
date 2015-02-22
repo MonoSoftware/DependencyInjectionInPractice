@@ -1,16 +1,16 @@
 ﻿using System;
 
-namespace DIPractice.Weapons
+namespace DIPractice.Common.Warriors
 {
-    public interface ISword : IWeapon
+    public interface IWarrior
     {
         #region Methods
 
         /// <summary>
-        /// Hits the specified target.
+        /// Attacks the specified target.
         /// </summary>
         /// <param name="target">The target.</param>
-        void Hit(string target);
+        void Attack(string target);
 
         #endregion Methods
     }

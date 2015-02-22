@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DIPractice.Common.Weapons;
+using System;
 
 namespace DIPractice.Weapons
 {

@@ -1,17 +1,8 @@
-﻿/*
- * Dependency Injection in Practice
- * Copyright 2015 Kristijan Horvat
- *
- * Examples taken from Ninject  Wiki
- * https://github.com/ninject/Ninject/wiki/
- *
- * */
-
-using System;
+﻿using System;
 
 namespace DIPractice.Weapons
 {
-    public class ChoppedWeaponAction : IWeaponAction
+    public class ChoppedWeaponAction : IChoppedWeaponAction
     {
         #region Methods
 

@@ -1,9 +1,9 @@
-﻿using DIPractice.Common.Weapons;
+﻿using DIPractice.Weapons;
 using System;
 
-namespace DIPractice.Weapons
+namespace DIPractice.Ex.Weapons
 {
-    public class PiercedWeaponAction : IWeaponAction
+    public class ChoppedWeaponActionEx : IChoppedWeaponAction
     {
         #region Methods
 
@@ -13,7 +13,7 @@ namespace DIPractice.Weapons
         /// <returns>Action to perform.</returns>
         public string GetAction()
         {
-            return "Pierced";
+            return "Extended Chopped";
         }
 
         #endregion Methods

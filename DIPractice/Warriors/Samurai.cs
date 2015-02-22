@@ -1,24 +1,15 @@
-﻿using System;
+﻿using DIPractice.Common.Weapons;
+using System;
 
 namespace DIPractice.Weapons
 {
-    public class Samurai : DIPractice.Warriors.IWarrior
+    public class Samurai : DIPractice.Common.Warriors.IWarrior
     {
         #region Fields
 
         private readonly IWeaponFactory weaponFactory;
 
         #endregion Fields
-
-        #region Properties
-
-        /// <summary>
-        /// Gets or sets the identifier.
-        /// </summary>
-        /// <value>The identifier.</value>
-        protected long Id { get; private set; }
-
-        #endregion Properties
 
         #region Constructors
 
@@ -29,7 +20,6 @@ namespace DIPractice.Weapons
         public Samurai(IWeaponFactory weaponFactory)
         {
             this.weaponFactory = weaponFactory;
-            this.Id = DateTime.UtcNow.Ticks;
         }
 
         #endregion Constructors
@@ -42,7 +32,6 @@ namespace DIPractice.Weapons
         /// <param name="target">The target.</param>
         public void Attack(string target)
         {
-            Console.WriteLine("Samurai id: {0}", Id);
             if (target.Contains("enemy"))
             {
                 weaponFactory.CreateDagger().Hit(target);

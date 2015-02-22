@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DIPractice.Weapons
+namespace DIPractice.Common.Weapons
 {
     public interface IWeaponAction
     {

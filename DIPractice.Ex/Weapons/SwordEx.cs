@@ -1,17 +1,18 @@
 ﻿using DIPractice.Common.Weapons;
+using DIPractice.Weapons;
 using System;
 
-namespace DIPractice.Weapons
+namespace DIPractice.Ex.Weapons
 {
-    public class Shuriken : IShuriken
+    public class SwordEx : ISword
     {
         #region Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Shuriken" /> class.
+        /// Initializes a new instance of the <see cref="Sword" /> class.
         /// </summary>
         /// <param name="weaponAction">The weapon action.</param>
-        public Shuriken(PiercedWeaponAction weaponAction)
+        public SwordEx(IChoppedWeaponAction weaponAction)
         {
             this.WeaponAction = weaponAction;
         }
@@ -36,7 +37,7 @@ namespace DIPractice.Weapons
         /// <param name="target">The target.</param>
         public void Hit(string target)
         {
-            Console.WriteLine("{0} {1}'s armor", WeaponAction.GetAction(), target);
+            Console.WriteLine("SwordEx {0} {1} clean in half", WeaponAction.GetAction(), target);
         }
 
         #endregion Methods

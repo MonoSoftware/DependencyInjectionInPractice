@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36AA52A8-6071-458B-9B68-E51734E5DFA7}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{68B30B33-D98C-4A2D-82BD-F4EE604D5430}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DIPractice</RootNamespace>
-    <AssemblyName>DIPractice</AssemblyName>
+    <RootNamespace>DIPractice.Common</RootNamespace>
+    <AssemblyName>DIPractice.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ninject">
-      <HintPath>packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,31 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Warriors\Samurai.cs" />
-    <Compile Include="Weapons\WeaponFactory.cs" />
-    <Compile Include="Weapons\DaggerFactory.cs" />
-    <Compile Include="Weapons\GenericWeaponAction.cs" />
-    <Compile Include="Weapons\ChoppedWeaponAction.cs" />
-    <Compile Include="Weapons\PiercedWeaponAction.cs" />
-    <Compile Include="Weapons\Shuriken.cs" />
-    <Compile Include="Weapons\Dagger.cs" />
-    <Compile Include="Weapons\Sword.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DIPractice.Common\DIPractice.Common.csproj">
-      <Project>{68b30b33-d98c-4a2d-82bd-f4ee604d5430}</Project>
-      <Name>DIPractice.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DIPractice.Ex\DIPractice.Ex.csproj">
-      <Project>{ea6ed350-f096-439d-8bda-1f977d8469be}</Project>
-      <Name>DIPractice.Ex</Name>
-    </ProjectReference>
+    <Compile Include="Warriors\IWarrior.cs" />
+    <Compile Include="Weapons\IChoppedWeaponAction.cs" />
+    <Compile Include="Weapons\IAction.cs" />
+    <Compile Include="Weapons\IDagger.cs" />
+    <Compile Include="Weapons\IDaggerFactory.cs" />
+    <Compile Include="Weapons\IShuriken.cs" />
+    <Compile Include="Weapons\ISword.cs" />
+    <Compile Include="Weapons\IWeapon.cs" />
+    <Compile Include="Weapons\IWeaponFactory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
