@@ -2,6 +2,7 @@
 using DIPractice.Common.Weapons;
 using DIPractice.Weapons;
 using Ninject;
+using Ninject.Extensions.Factory;
 using System;
 
 namespace DIPractice
@@ -26,11 +27,13 @@ namespace DIPractice
             //NOTE: Composition Root
             IKernel kernel = new StandardKernel();
             kernel.Bind<IDagger>().To<Dagger>();
-            kernel.Bind<IDaggerFactory>().To<DaggerFactory>();
+            kernel.Bind<IDaggerFactory>().ToFactory();
             kernel.Bind<IChoppedWeaponAction>().To<ChoppedWeaponAction>().InSingletonScope();
+            kernel.Bind<IShuriken>().To<Shuriken>();
             kernel.Bind<IWeapon>().To<Shuriken>();
+            kernel.Bind<ISword>().To<Sword>();
             kernel.Bind<IWeapon>().To<Sword>();
-            kernel.Bind<IWeaponFactory>().To<WeaponFactory>();
+            kernel.Bind<IWeaponFactory>().ToFactory();
             kernel.Bind<IWarrior>().To<Samurai>();
 
             kernel.Load(new DIPractice.Ex.DIModule());

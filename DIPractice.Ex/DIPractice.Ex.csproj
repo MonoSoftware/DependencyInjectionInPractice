@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moq">
-      <HintPath>..\DIPractice\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
-    </Reference>
     <Reference Include="Ninject">
       <HintPath>..\DIPractice\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
@@ -49,7 +46,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Weapons\ChoppedWeaponActionEx.cs" />
     <Compile Include="Weapons\SwordEx.cs" />
-    <Compile Include="Weapons\WeaponFactoryEx.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DIPractice.Common\DIPractice.Common.csproj">

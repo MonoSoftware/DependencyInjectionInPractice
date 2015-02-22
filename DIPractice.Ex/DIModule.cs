@@ -1,5 +1,6 @@
 ﻿using DIPractice.Common.Weapons;
 using DIPractice.Ex.Weapons;
+using DIPractice.Weapons;
 using System;
 
 namespace DIPractice.Ex
@@ -11,7 +12,7 @@ namespace DIPractice.Ex
         public override void Load()
         {
             Kernel.Rebind<ISword>().To<SwordEx>();
-            Kernel.Rebind<IWeaponFactory>().To<WeaponFactoryEx>();
+            Kernel.Rebind<IChoppedWeaponAction>().To<ChoppedWeaponActionEx>();
         }
 
         #endregion Methods
